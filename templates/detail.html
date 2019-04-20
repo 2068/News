@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block jum %}
+{% endblock jum %}
+{% block row %}
+    <div class="article-content-left">
+    {% for new in news %}
+        <h1 class="text-center">{{ new.title }}</h1>
+        {{ new.content|safe }}
+    {% endfor %}
+    </div>
+{% endblock row %}

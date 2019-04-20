@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block row %}
+    <table class="table table-hover" style="font-size: 20px">
+        <thead>
+        <tr class="info">
+            <th>标题</th>
+            <th>发布时间</th>
+            <th>原文链接</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for new in page.object_list %}
+            <tr>
+                <td><a href="/detail/{{ new.id }}">{{ new.title }}</a></td>
+                <td>{{ new.pub_time }}</td>
+                <td><a href="{{ new.url }}">>></a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div style="text-align: center;">
+    {% if page.has_previous %}
+    <a class="btn" style="font-size: 20px;margin: 5px; color:#000;" href="/list/{{ curtent_id }}/{{ page.previous_page_number }}">&lt;上一页</a>
+    {% endif %}
+    {% for pindex in page.paginator.page_range %}
+        {% if pindex == page.number %}
+            <span style="font-size: 30px;cursor:pointer;margin: 5px;">{{ pindex }}</span>
+        {% else %}
+            <a class="btn" style="font-size: 30px;margin: 5px;color:#000;" href="/list/{{ curtent_id }}/{{ pindex }}">{{ pindex }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if page.has_next %}
+        <a class="btn" style="font-size: 20px;margin: 5px;color:#000;" href="/list/{{ curtent_id }}/{{ page.next_page_number }}">下一页&gt;</a>
+    {% endif %}
+    </div>
+{% endblock row %}

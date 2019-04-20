@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://v3.bootcss.com/examples/offcanvas/ -->
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/static/images/minion.png">
+
+    <title>哈哈新闻</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/static/css/offcanvas.css" rel="stylesheet">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/offcanvas.js"></script>
+    <script src="/static/js/highcharts.js"></script>
+    <script src="/static/js/highcharts-3d.js"></script>
+    <script src="/static/js/exporting.js"></script>
+    <script src="/static/js/export-data.js"></script>
+    <script src="/static/js/highcharts-more.js"></script>
+    <script src="/static/js/highcharts-zh_CN.js"></script>
+    <script src="/static/js/wordcloud.js"></script>
+    <script src="/static/js/oldie.js"></script>
+    <style>
+        body {
+            font-family: 全新硬笔行书简;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: #000;
+        }
+        audio{
+            position: absolute;
+            top:8px;
+            right: 0px;
+            z-index: 9999999;
+             {#display: none;#}
+        }
+
+        .img_wrapper {
+            text-align: center;
+        }
+
+        .article {
+            font-size: 30px;
+            letter-spacing: 1px;
+            line-height: 45px;
+        }
+
+        .show_author {
+            text-align: right;
+        }
+
+        .article-content-left .img_descr {
+            line-height: 20px;
+            padding: 6px 0;
+            font-size: 12px;
+            margin: 5px auto;
+            display: inline-block;
+            display: -moz-inline-stack;
+            zoom: 1;
+            text-align: left;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index">哈哈新闻</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse" style="font-size: 20px">
+            <ul class="nav navbar-nav">
+                <li><a href="/index">主页</a></li>
+                <li><a href="/about">关于我们</a></li>
+                <li><a href="/contact">联系</a></li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+    <audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
+            	src="/static/sound/何为永恒.mp3">
+	</audio>
+</nav><!-- /.navbar -->
+
+<div class="container">
+    <div class="row row-offcanvas row-offcanvas-right">
+
+        {#        <div class="col-xs-12 col-sm-9">#}
+        <div class="col-xs-12">
+            {% block jum %}
+{#                <div class="jumbotron" style="background-color:#c6cbef;">#}
+                <div class="jumbotron" style="background-color:#dff1e1;">
+                    {#                    <h2>主题</h2>#}
+                    <p>哈哈新闻中心，24小时滚动报道国内、国际及社会新闻。每日编发新闻数以万计。
+                        全国各地今日头条新闻联盟，每天新闻联播，今日头条新闻，今日新鲜事，汇集各
+                        大新闻网站的新闻头条，并收集了最权威的新闻网址，供您参考。
+                    </p>
+                </div>
+            {% endblock jum %}
+            {% block row %}
+                {#            <div class="row">#}
+                {#                <div class="col-xs-6 col-lg-4">#}
+                {#                    <h2>Heading</h2>#}
+                {#                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor#}
+                {#                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada#}
+                {#                        magna mollis euismod. Donec sed odio dui. </p>#}
+                {#                    <p><a class="btn btn-default" href="https://v3.bootcss.com/examples/offcanvas/#" role="button">View#}
+                {#                        details »</a></p>#}
+                {#                </div><!--/.col-xs-6.col-lg-4-->#}
+                {#                <div class="col-xs-6 col-lg-4">#}
+                {#                    <h2>Heading</h2>#}
+                {#                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor#}
+                {#                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada#}
+                {#                        magna mollis euismod. Donec sed odio dui. </p>#}
+                {#                    <p><a class="btn btn-default" href="https://v3.bootcss.com/examples/offcanvas/#" role="button">View#}
+                {#                        details »</a></p>#}
+                {#                </div><!--/.col-xs-6.col-lg-4-->#}
+                {#                <div class="col-xs-6 col-lg-4">#}
+                {#                    <h2>Heading</h2>#}
+                {#                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor#}
+                {#                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada#}
+                {#                        magna mollis euismod. Donec sed odio dui. </p>#}
+                {#                    <p><a class="btn btn-default" href="https://v3.bootcss.com/examples/offcanvas/#" role="button">View#}
+                {#                        details »</a></p>#}
+                {#                </div><!--/.col-xs-6.col-lg-4-->#}
+                {#                <div class="col-xs-6 col-lg-4">#}
+                {#                    <h2>Heading</h2>#}
+                {#                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor#}
+                {#                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada#}
+                {#                        magna mollis euismod. Donec sed odio dui. </p>#}
+                {#                    <p><a class="btn btn-default" href="https://v3.bootcss.com/examples/offcanvas/#" role="button">View#}
+                {#                        details »</a></p>#}
+                {#                </div><!--/.col-xs-6.col-lg-4-->#}
+                {#                <div class="col-xs-6 col-lg-4">#}
+                {#                    <h2>Heading</h2>#}
+                {#                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor#}
+                {#                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada#}
+                {#                        magna mollis euismod. Donec sed odio dui. </p>#}
+                {#                    <p><a class="btn btn-default" href="https://v3.bootcss.com/examples/offcanvas/#" role="button">View#}
+                {#                        details »</a></p>#}
+                {#                </div><!--/.col-xs-6.col-lg-4-->#}
+                {#                <div class="col-xs-6 col-lg-4">#}
+                {#                    <h2>Heading</h2>#}
+                {#                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor#}
+                {#                        mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada#}
+                {#                        magna mollis euismod. Donec sed odio dui. </p>#}
+                {#                    <p><a class="btn btn-default" href="https://v3.bootcss.com/examples/offcanvas/#" role="button">View#}
+                {#                        details »</a></p>#}
+                {#                </div><!--/.col-xs-6.col-lg-4-->#}
+                {#            </div><!--/row-->#}
+            {% endblock row %}
+        </div><!--/.col-xs-12.col-sm-9-->
+
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p style="font-size: 20px;text-align:center;">© Company 2019 author:Petrichor email:wdx2068@126.com</p>
+    </footer>
+
+</div><!--/.container-->
+
+
+</body>
+
+</html>
